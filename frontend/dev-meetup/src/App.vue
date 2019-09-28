@@ -1,23 +1,31 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <Header msg="Header"></Header>
+    <Home></Home>
+    <Footer></Footer>
     <router-view/>
   </div>
 </template>
 
 <script>
+import { Header, Footer, Home } from './components/index'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Header,
+    Home,
+    Footer
+  },
+  mounted () {
+    console.log(process.env.ROOT_API)
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  * {
+    margin: 0;
+    padding: 0;
+  }
 </style>
