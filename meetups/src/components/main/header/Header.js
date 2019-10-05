@@ -1,5 +1,5 @@
 export default {
-    data: () => ({
-        msg: 'Home'
-    })
+  data: () => ({
+    msg: 'Home'
+  })
 }

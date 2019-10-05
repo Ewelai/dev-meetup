@@ -15,14 +15,15 @@
       </v-toolbar-items>
 
       <template v-if="$vuetify.breakpoint.smAndUp">
-        <v-btn rounded color="primary" dark>Sign up</v-btn>
+        <v-btn rounded color="primary" dark>
+          <router-link to="/login" exact class="white--text link">Sign Up</router-link>
+        </v-btn>
       </template>
     </v-toolbar>
   </div>
 </template>
 
 <script src="./Header.js"></script>
-
-<style lang="css" scoped></style>
+<style src="./Header.css"></style>
 
 
