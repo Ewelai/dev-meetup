@@ -4,9 +4,9 @@ export default {
     // "app-login": Login
   },
   data: () => {
-    console.log(process.env.VUE_APP_ROOT_API)
     return {
       msg: 'Home title',
+      env: process.env.VUE_APP_ROOT_API,
       colors: [
         'indigo',
         'warning',

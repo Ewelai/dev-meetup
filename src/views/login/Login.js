@@ -23,7 +23,6 @@ export default {
 
   methods: {
     submit() {
-      console.log(this.form);
       if (this.$refs.login.validate()) {
         this.snackbar = true;
       }
