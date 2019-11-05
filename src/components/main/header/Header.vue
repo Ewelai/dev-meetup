@@ -26,6 +26,11 @@
 </template>
 
 <script src="./Header.js"></script>
-<style src="./Header.css"></style>
+
+<style scoped>
+  .link {
+    text-decoration: none;
+  }
+</style>
 
 

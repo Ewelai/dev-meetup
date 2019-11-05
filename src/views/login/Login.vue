@@ -11,4 +11,9 @@
 </template>
 
 <script src="./Login.js"></script>
-<style src="./Login.css"></style>
+
+<style scoped>
+  .container {
+    max-width: 750px;
+  }
+</style>
