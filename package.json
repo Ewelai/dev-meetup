@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prod": "vue-cli-service serve --mode production --port 3001",
+    "prod": "vue-cli-service serve --mode production",
     "start": "node server.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
