@@ -1,10 +1,8 @@
-import { Slide } from 'vue-burger-menu';
-
 export default {
-  components: {
-    Slide
-  },
   data: () => ({
     msg: 'Home',
+    links: [
+      {text: 'Link 1', src: '/login'}
+    ]
   })
 }

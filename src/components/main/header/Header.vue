@@ -27,10 +27,10 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item>
-            <v-list-item-title>LO</v-list-item-title>
-            <v-list-item-title>li</v-list-item-title>
-            <v-list-item-title>kg</v-list-item-title>
+          <v-list-item v-for="(link, i) in links" :key="i">
+            <v-list-item-content>
+              <v-list-item-title :href="link.src" v-text="link.text"></v-list-item-title>
+            </v-list-item-content>
           </v-list-item>
         </v-list>
       </v-menu>
