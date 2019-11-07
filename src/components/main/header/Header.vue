@@ -18,11 +18,12 @@
         </v-btn>
       </v-toolbar-items>
 
-      <v-menu offset-y>
+      <div class="hidden-md-and-up">
+        <v-menu offset-y>
         <template v-slot:activator="{ on }">
           <v-btn text v-on="on">
-            <v-icon left>list</v-icon>
             Menu
+            <v-icon right>mdi-dots-vertical</v-icon>
           </v-btn>
         </template>
         <v-list>
@@ -33,6 +34,7 @@
           </v-list-item>
         </v-list>
       </v-menu>
+      </div>
     </v-toolbar>
   </div>
 </template>
