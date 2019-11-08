@@ -1,25 +1,41 @@
+import * as rules from '../../utils/validation.util';
+
 export default {
   data: () => ({
     valid: true,
+    showPassword: false,
+    showConfirm: false,
     form: {
       checkbox: false,
       name: '',
       email: '',
-    },
-    errors: {
-      nameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
-      ],
-      emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-      ],
-      checkboxRules: [
-        v => !!v || 'You must agree to continue!'
-      ]
+      password: '',
+      confirmPassword: '',
     }
   }),
+
+  computed: {
+    rules() {
+      return {
+        nameRules: [
+          rules.REQUIRED,
+          rules.MAX_VALUE(5),
+          rules.MIN_VALUE(2)
+        ],
+        emailRules: [
+          rules.REQUIRED,
+          rules.EMAIL
+        ],
+        passwordRules: [
+          rules.REQUIRED,
+          rules.SAME_PASSWORD(this.form.password)
+        ],
+        checkboxRules: [
+          rules.CHECKBOX
+        ]
+      }
+    }
+  },
 
   methods: {
     submit() {

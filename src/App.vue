@@ -8,7 +8,6 @@
 
 <script>
 import { Header, Footer } from './components/index';
-
 export default {
   name: "App",
   components: {
@@ -20,3 +19,7 @@ export default {
   })
 };
 </script>
+
+<style scoped>
+  @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+</style>
